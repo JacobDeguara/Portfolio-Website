@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-body{
+body {
   font-family: Poppins;
   background-color: rgb(230, 230, 230);
   color: black;
@@ -8,227 +8,257 @@ body{
   font-size: 12px;
 }
 
-a{
+main{
+  margin-left: 5rem;
+}
+
+.navbar{
+  width: 5rem;
+  height: 100vh;
+  position: fixed;
+}
+
+.navbar-nav{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-item{
+  width: 100%;
+}
+
+.nav-item:nth-last-child(2){
+  margin-top:auto;
+}
+
+.nav-link{
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: black;
   text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+}
+
+.nav-link:hover{
+  filter: grayscale(0%) opacity(1);
+  background-color: white;
   color: black;
 }
 
-header{
-  width: 1140px;
-  max-width: 80%;
-  margin: auto;
-  height: 50px;
-  display: flex;
-  align-items: center;
+.link-text{
+  display:none;
+  margin-left: 1rem;
 }
 
-header a{
-  margin-right: 40px;
+.nav-link img{
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
 }
 
-.profile{
+
+
+.profile {
   display: flex;
-  background-color: rgb(186, 186, 186);
+  background-color: rgb(200, 200, 200);
   height: auto;
   overflow: hidden;
   flex-wrap: wrap;
+  border-style: none;
 }
 
-.profile img{
+.profile img {
   width: 100%;
   max-width: 768px;
   height: auto;
 }
-img.profile-img-small{
+img.profile-img-small {
   display: none;
 }
-img.profile-img-wide{
+img.profile-img-wide {
   display: flex;
 }
 
-.profile-center{
+.profile-center {
   display: flex;
   padding: 25px;
   height: auto;
   justify-content: left;
   align-items: center;
-  padding-bottom: 0px;
+  border-width: 0px;
+  border-top-width: 5px;
+  border-bottom-width: 5px;
+  border-color: rgb(105, 105, 105);
+  border-style: solid;
 }
-.profile-center h1{
-  margin: auto;
-  font-size: 5vmax;
+.profile-center h1 {
   display: flex;
   align-items: center;
+  margin: auto;
+  font-size: 3vmax;
 }
-.profile-center h2{
+.profile-center h2 {
+  display: flex;
+  align-items: center;
+
   margin: auto;
   margin-bottom: 10px;
-  font-size: 2vmax;
-  display: flex;
-  align-items: center;
+
+  font-size: 1.5vmax;
+  font-weight: normal;
+  font-style: italic;
+  color: rgb(68, 68, 68);
 }
-.profile-center button{
+.profile-center button {
 }
 
-.profile-about-me{
+.profile-about-me {
   display: flex;
   padding: 25px;
   max-width: 2560px;
+
+  background-color: rgb(230, 230, 230);
 }
-.profile-about-me .about-me{
+.profile-about-me .about-me {
   display: flex;
   flex-wrap: wrap;
 }
-.profile-about-me h1{
+.profile-about-me h1 {
   margin-top: 0px;
   margin-bottom: 0px;
   display: flex;
   padding: 0px;
-  font-size: 4vmax;
+  font-size: 4vmin;
 }
-.profile-about-me p{
+.profile-about-me p {
   margin-top: 0px;
   margin-bottom: 0px;
-  font-size: 2vmax;
+  font-size: 2.5vmax;
   padding-top: 10px;
 }
 
 @media (max-width: 640px) {
-  .profile{
+  .profile {
     flex-direction: column;
   }
-  .profile img{
+  .profile img {
     width: 100%;
     max-width: 768px;
     height: auto;
     background-image: url("Assets/ProfilePicture.JPG");
   }
 
-  img.profile-img-small{
+  img.profile-img-small {
     display: flex;
   }
-  img.profile-img-wide{
+  img.profile-img-wide {
     display: none;
   }
 
-  .profile-center{
+  .profile-center {
     height: auto;
     justify-content: left;
     align-items: flex-start;
   }
 
-  .profile-about-me p{
+  .profile-about-me p {
     font-size: 2vmax;
   }
 }
 @media (min-width: 768px) {
-  .profile{
+  .profile {
     flex-direction: column;
   }
 
-  .profile img{
+  .profile img {
     width: 100%;
     max-width: 1024px;
     height: auto;
     background-image: url("Assets/ProfilePictureWide.JPG");
   }
 
-  img.profile-img-small{
+  img.profile-img-small {
     display: none;
   }
-  img.profile-img-wide{
+  img.profile-img-wide {
     display: flex;
   }
 
-  .profile-center{
+  .profile-center {
     height: auto;
     justify-content: left;
     align-items: flex-start;
   }
-  .profile-about-me p{
+  .profile-about-me p {
     font-size: 2vmax;
   }
 }
 @media (min-width: 1024px) {
-  .profile{
+  .profile {
     flex-direction: column;
   }
-  .profile img{
+  .profile img {
     width: 100%;
     max-width: 1440px;
     height: auto;
     background-image: url("Assets/ProfilePictureWide.JPG");
   }
 
-  img.profile-img-small{
+  img.profile-img-small {
     display: none;
   }
-  img.profile-img-wide{
+  img.profile-img-wide {
     display: flex;
   }
 
-  .profile-center{
+  .profile-center {
     height: auto;
     justify-content: left;
     align-items: flex-start;
   }
-  .profile-about-me p{
+  .profile-about-me p {
     font-size: 2vmax;
   }
 }
 @media (min-width: 1440px) {
-  .profile{
+  .profile {
     flex-direction: row;
+    border-width: 0px;
+    border-bottom-width: 5px;
+    border-color: rgb(105, 105, 105);
+    border-style: solid;
   }
-  .profile img{
+  .profile img {
     width: 100%;
     max-width: 700px;
     height: auto;
     background-image: url("Assets/ProfilePicture.JPG");
+    border-width: 0px;
+    border-right-width: 5px;
+    border-color: rgb(105, 105, 105);
+    border-style: solid;
   }
 
-  img.profile-img-small{
+  img.profile-img-small {
     display: flex;
   }
-  img.profile-img-wide{
+  img.profile-img-wide {
     display: none;
   }
 
-  .profile-center{
+  .profile-center {
     height: 550px;
     justify-content: left;
     align-items: center;
+    border-style: none;
   }
-  .profile-about-me p{
-    font-size: 1vmax;
-  }
-}
-@media (min-width: 2560px) {
-  .profile{
-    flex-direction: row;
-  }
-
-  .profile img{
-    width: 100%;
-    max-width: 700px;
-    height: auto;
-    background-image: url("Assets/ProfilePicture.JPG");
-  }
-
-  img.profile-img-small{
-    display: flex;
-  }
-  img.profile-img-wide{
-    display: none;
-  }
-
-  .profile-center{
-    height: 550px;
-    justify-content: left;
-    align-items: center;
-  }
-  
-  .profile-about-me p{
+  .profile-about-me p {
     font-size: 1vmax;
   }
 }
